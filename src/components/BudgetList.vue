@@ -14,24 +14,8 @@
           >
             <v-toolbar-title>Budget List</v-toolbar-title>
           </v-toolbar>
-            <template v-if="!isEmpty">
-              <v-list-item
-              v-for="(item, i) in list"
-              :key="i"
-              class="mb-3"
-              >
-                <v-list-item-content>
-                  <v-list-item-title v-text="item.comment"></v-list-item-title>
-                </v-list-item-content>
-                <v-list-item-content>
-                  <v-list-item-subtitle class="text-center" v-text="item.value"></v-list-item-subtitle>
-                </v-list-item-content>
-                <v-btn large color="error" @click="deleteItem(item.id)">Delete</v-btn>
-              </v-list-item>
-            </template>
-            <v-alert type="info" v-else>
-              Empty List
-            </v-alert>
+          <app-budget-item :list="list" @deleteItem="onDeleteItem"></app-budget-item>
+
         </v-card>
       </v-flex>
     </v-layout>
@@ -39,7 +23,12 @@
 </template>
 
 <script>
+import BudgetListItem from './BudgetListItem'
+
 export default {
+  components: {
+    appBudgetItem: BudgetListItem
+  },
   name: 'BudgetList',
   props: {
     list: {
@@ -50,14 +39,9 @@ export default {
   data: () => ({
     header: 'Budget List'
   }),
-  computed: {
-    isEmpty () {
-      return !Object.keys(this.list).length
-    }
-  },
   methods: {
-    deleteItem (id) {
-      this.$emit('deleteItem', id)
+    onDeleteItem (id) {
+      this.$delete(this.list, id)
     }
   }
 }

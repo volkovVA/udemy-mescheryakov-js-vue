@@ -2,7 +2,7 @@
   <v-app>
     <app-total-balance :total="totalBalance"></app-total-balance>
     <app-form @submitForm="onFormSubmit"></app-form>
-    <app-budget-list :list="list" @deleteItem="onDeleteItem"></app-budget-list>
+    <app-budget-list :list="list"></app-budget-list>
   </v-app>
 </template>
 
@@ -42,9 +42,6 @@ export default {
     }
   },
   methods: {
-    onDeleteItem (id) {
-      this.$delete(this.list, id)
-    },
     onFormSubmit (data) {
       const newObj = {
         ...data,

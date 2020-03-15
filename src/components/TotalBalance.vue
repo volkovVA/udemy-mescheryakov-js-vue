@@ -1,5 +1,5 @@
 <template>
-  <div class="total-value">Balance: {{ total }}</div>
+  <div class="total-value" :class="classObject">Balance: {{ total }}</div>
 </template>
 
 <script>
@@ -9,6 +9,15 @@ export default {
     total: {
       type: Number,
       default: 0
+    }
+  },
+  computed: {
+    classObject: function () {
+      return {
+        'black--text': this.total === 0,
+        'green--text': this.total > 0,
+        'red--text': this.total < 0
+      }
     }
   }
 }
