@@ -1,17 +1,20 @@
 <template>
   <v-app>
-    <app-budget-list :list="list"></app-budget-list>
+    <app-total-balance :total="totalBalance"></app-total-balance>
+    <app-budget-list :list="list" @deleteItem="onDeleteItem"></app-budget-list>
   </v-app>
 </template>
 
 <script>
 import BudgetList from '@/components/BudgetList'
+import TotalBalance from '@/components/TotalBalance'
 
 export default {
   name: 'App',
 
   components: {
-    appBudgetList: BudgetList
+    appBudgetList: BudgetList,
+    appTotalBalance: TotalBalance
   },
 
   data: () => ({
@@ -29,6 +32,16 @@ export default {
         id: 2
       }
     }
-  })
+  }),
+  computed: {
+    totalBalance () {
+      return Object.values(this.list).reduce((acc, item) => acc + item.value, 0)
+    }
+  },
+  methods: {
+    onDeleteItem (id) {
+      this.$delete(this.list, id)
+    }
+  }
 }
 </script>
