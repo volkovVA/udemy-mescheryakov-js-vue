@@ -32,8 +32,9 @@ body {
 }
 
 /* Header styles */
-.header .brand-logo {
-  position: static;
+
+.header .hide-on-med-and-down {
+  display: block !important;
 }
 
 .header .currency-select input.select-dropdown {
@@ -52,10 +53,6 @@ body {
 
 .header .currency-select .caret {
   fill: #fff;
-}
-
-.header .brand-logo {
-  font-size: 1.5rem;
 }
 
 .ticket-card {
