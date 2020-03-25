@@ -150,6 +150,7 @@ function clearContainer(container) {
 // News item template function
 
 function newsTemplate({ urlToImage, title, url, description }) {
+  if (urlToImage === null) { urlToImage = './image/news.jpg'}
   return `
     <div class="col s12">
       <div class="card">
