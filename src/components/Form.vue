@@ -41,7 +41,7 @@
               required
             />
             <v-btn
-              @click="onSubmit"
+              @click.prevent="onSubmit"
               color="light-blue accent-3"
             >
               submit
@@ -54,6 +54,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'Form',
   data: () => {
@@ -76,10 +78,15 @@ export default {
     }
   },
   methods: {
+    ...mapActions('listStore', ['addListItem']),
     onSubmit () {
       if (this.$refs.addItemForm.validate()) {
-        this.$emit('submitForm', { ...this.formData })
+        const newObj = {
+          ...this.formData,
+          id: String(Math.random())
+        }
         this.$refs.addItemForm.reset()
+        this.addListItem(newObj)
       }
     },
     plusMinus (type) {

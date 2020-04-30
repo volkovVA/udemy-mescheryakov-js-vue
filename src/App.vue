@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <app-form @submitForm="onFormSubmit"></app-form>
-    <app-total-balance :list="list"></app-total-balance>
-    <app-budget-list :list="list"></app-budget-list>
+    <app-form></app-form>
+    <app-total-balance></app-total-balance>
+    <app-budget-list></app-budget-list>
   </v-app>
 </template>
 
@@ -18,32 +18,6 @@ export default {
     appBudgetList: BudgetList,
     appTotalBalance: TotalBalance,
     appForm: Form
-  },
-
-  data: () => ({
-    list: {
-      1: {
-        type: 'INCOME',
-        value: 100,
-        comment: 'Some comment',
-        id: 1
-      },
-      2: {
-        type: 'OUTCOME',
-        value: 50,
-        comment: 'Some outcome comment',
-        id: 2
-      }
-    }
-  }),
-  methods: {
-    onFormSubmit (data) {
-      const newObj = {
-        ...data,
-        id: String(Math.random())
-      }
-      this.$set(this.list, newObj.id, newObj)
-    }
   }
 }
 </script>

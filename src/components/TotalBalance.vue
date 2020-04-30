@@ -3,15 +3,18 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'TotalBalance',
-  props: {
-    list: {
-      type: Object,
-      default: null
-    }
-  },
+  // props: {
+  //   list: {
+  //     type: Object,
+  //     default: null
+  //   }
+  // },
   computed: {
+    ...mapGetters('listStore', ['budgetList']),
     // 3. TotalBalance должен менять цвет текста в зависимости от значения total,
     // если значение больше нуля то цвет  зеленый, если ноль то черный и если
     // меньше нуля то красный.
@@ -25,7 +28,7 @@ export default {
       return 'red--text'
     },
     totalBalance () {
-      return Object.values(this.list).reduce((acc, item) => acc + this.plusMinus(item.type) * item.value, 0)
+      return Object.values(this.budgetList).reduce((acc, item) => acc + this.plusMinus(item.type) * item.value, 0)
     }
   },
   methods: {

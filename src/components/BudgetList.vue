@@ -32,6 +32,7 @@
 
 <script>
 import BudgetListItem from './BudgetListItem'
+import { mapGetters } from 'vuex'
 
 export default {
   components: {
@@ -49,14 +50,15 @@ export default {
     sortName: 'INCOME'
   }),
   computed: {
+    ...mapGetters('listStore', ['budgetList']),
     isEmpty () {
-      return !Object.keys(this.list).length
+      return !Object.keys(this.budgetList).length
     },
     sort () {
       const result = {}
-      for (const item in this.list) {
-        const sort = this.list[item]
-        if (this.list[item].type === this.sortName) {
+      for (const item in this.budgetList) {
+        const sort = this.budgetList[item]
+        if (this.budgetList[item].type === this.sortName) {
           result[item] = sort
         }
       }
@@ -64,11 +66,11 @@ export default {
     }
   },
   created () {
-    this.filterList = this.list
+    this.filterList = this.budgetList
   },
   methods: {
     onDeleteItem (id) {
-      this.$delete(this.list, id)
+      this.$delete(this.budgetList, id)
     },
     sortList (sortName) {
       this.sortName = sortName
@@ -76,7 +78,7 @@ export default {
     },
     showAll () {
       // eslint-disable-next-line no-return-assign
-      return this.filterList = this.list
+      return this.filterList = this.budgetList
     }
   }
 }
