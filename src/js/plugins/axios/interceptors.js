@@ -11,7 +11,6 @@ function setToken(req) {
   return req;
 }
 
-
 function setTokenOnLogin(res) {
   const isLoginUrl = res.config.url.includes('login');
 
