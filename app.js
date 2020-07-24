@@ -58,7 +58,7 @@ const http = customHttp();
 
 const newsService = (function () {
   const apiKey = '98ea975c67324ad9a3a54da6d117a14a';
-  const apiUrl = 'https://newsapi.org/v2';
+  const apiUrl = 'https://news-api-v2.herokuapp.com';
 
   return {
     topHeadlines(country = 'ru', category = 'general', cb) {

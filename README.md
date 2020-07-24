@@ -1,8 +1,14 @@
 # news-app
-## SPA project
+## SPA проект
+
+Новостное приложение с возможностью выбора настроек для поиска новостей.
+
+***Цель***: Практика вёрстки на фреймворке **Materialize**. Изучение HTTP-запросов на сервер
+по технологии **XMLHttpRequest**. Работа с **DOM**.
+
 ```
 native JavaScript
 materialize
 ```
-## See [DEMO](https://volkovva.github.io/news-app/)
+## Посмотреть по ссылке: [NEWS-APP](https://volkovva.github.io/news-app/)
 ![todo](screenshots/demo.png "demo news-app")
