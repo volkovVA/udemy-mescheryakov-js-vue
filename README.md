@@ -12,8 +12,7 @@ Bootstrap
 Axios
 Autocomplite countries and cities
 ```
-## Посмотреть по ссылке: [LOGIN](https://volkovva.github.io/login-project/)
-![login](screenshots/demo.png "demo login-project")
+![login](login-project/screenshots/demo.png "demo login-project")
 
 ## Установка зависимостей
 ```
