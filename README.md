@@ -10,8 +10,7 @@
 * Materialize
 * Axios
 
-## Посмотреть по ссылке: [AVIATICKETS](https://volkovva.github.io/aviatickets-app/)
-![aviatickets-app](screenshots/demo.png "demo aviatickets-app")
+![aviatickets-app](aviatickets-app/screenshots/demo.png "demo aviatickets-app")
 
 ### Установка зависимостей
 ```
