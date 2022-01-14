@@ -10,5 +10,4 @@
 native JavaScript
 materialize
 ```
-## Посмотреть по ссылке: [NEWS-APP](https://volkovva.github.io/news-app/)
-![todo](screenshots/demo.png "demo news-app")
+![todo](news-app/screenshots/demo.png "demo news-app")
