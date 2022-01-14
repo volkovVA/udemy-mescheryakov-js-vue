@@ -4,8 +4,7 @@
 * Vue
 * Vuetify
 
-## See [DEMO](https://volkovva.github.io/budget-app/)
-![budget-app](screenshots/demo.png "demo budget-app")
+![budget-app](budget-app/screenshots/demo.png "demo budget-app")
 
 ## Project setup
 ```
