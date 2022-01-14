@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css">
+  </head>
+  <body>
+    <div class="login-page-wrapp d-flex">
+      <div class="login-form-wrap d-flex align-items-center">
+        <div class="form-card card ml-auto">
+          <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#loginForm">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#registerForm">Register</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+              <!-- login-body -->
+            <div class="card-body tab-pane fade show active" id="loginForm">
+              <h4 class="card-title">Please Login</h4>
+              <form name="loginForm">
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                    data-required="email"
+                    data-invalid-message="Please provide valid email example@example.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                    data-required="password"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            <!-- register-body -->
+            <div class="card-body tab-pane fade" id="registerForm">
+              <h4 class="card-title">Please Register</h4>
+              <form name="registerForm">
+                <div class="row">
+                  <div class="form-group col">
+                    <label for="emailReg">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="emailReg"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                      data-required="email"
+                      name="email"
+                      data-invalid-message="Please provide valid email example@example.com"
+                    />
+                  </div>
+                  <div class="form-group col">
+                    <label for="passwordReg">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="passwordReg"
+                      placeholder="Password"
+                      name="password"
+                      data-required="password"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col">
+                    <label for="nickname">Nickname</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nickname"
+                      placeholder="Nickname"
+                      name="nickname"
+                      data-required="nickname"
+                    />
+                  </div>
+                  <div class="form-group col">
+                    <label for="phone">Phone</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Phone"
+                      name="phone"
+                      data-required="phone"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col">
+                    <label for="first_name">First name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="first_name"
+                        placeholder="First name"
+                        name="first_name"
+                        data-required="first_name"
+                      />
+                  </div>
+                    <div class="form-group col">
+                      <label for="last_name">Last name</label>
+                      <input
+                      type="text"
+                      class="form-control"
+                      id="last_name"
+                      placeholder="Last name"
+                      name="last_name"
+                      data-required="last_name"
+                      />
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect">gender orientation</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect">
+                    <option value="male" selected>male</option>
+                    <option value="female">female</option>
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="form-group col">
+                    <label for="country">Country</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      placeholder="Country"
+                      name="country"
+                      data-required="country"
+                    />
+                  </div>
+                  <div class="form-group col">
+                    <label for="city">City</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="city"
+                      placeholder="City"
+                      name="city"
+                      data-required="city"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-group col">
+                      <input type="date" class="form-control" id="date_of_birth" placeholder="date_of_birth_day" data-required="date_of_birth_day"/>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.login-form-wrap -->
+      <div class="login-greeting-screen d-flex align-items-center">
+        <div class="login-greeting-screen-text">
+          <h1 class="login-greeting-screen-title">Welcome to my app</h1>
+          <p class="login-greeting-screen-description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+            inventore non accusantium earum, illo dolores reprehenderit laborum
+            ratione quos doloribus repellat eligendi deleniti. Ipsum voluptate
+            ipsa exercitationem eaque totam. A.
+          </p>
+        </div>
+      </div>
+      <!-- /.login-greeting-screen -->
+    </div>
+    <!-- /.login-page-wrapp -->
+  <script type="text/javascript" src="polyfill.14df8ba3ddf9c67df983.js"></script><script type="text/javascript" src="app.14df8ba3ddf9c67df983.js"></script></body>
+</html>
