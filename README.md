@@ -6,8 +6,7 @@
 * Vuex
 * VueRouter
 
-## See [DEMO](https://volkovva.github.io/movies-app/)
-![movies-app](screenshots/demo.png "demo movies-app")
+![movies-app](movies-app/screenshots/demo.png "demo movies-app")
 
 ## Project setup
 ```
