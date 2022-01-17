@@ -1,13 +1,12 @@
 # news-app
-## SPA проект
 
-Новостное приложение с возможностью выбора настроек для поиска новостей.
+### News app with a choice of settings for news search
 
-***Цель***: Практика вёрстки на фреймворке **Materialize**. Изучение HTTP-запросов на сервер
-по технологии **XMLHttpRequest**. Работа с **DOM**.
+***Goal***: Practicing the layout in the **Materialize** framework. Studying HTTP requests to the server by **XMLHttpRequest** technology. Working with **DOM**.
 
-```
-native JavaScript
-materialize
-```
-![todo](news-app/screenshots/demo.png "demo news-app")
+* Native JavaScript
+* Materialize
+
+## Live Demo: [News](https://volkovva.github.io/udemy-js-vue/news-app/)
+
+![news](news-app/screenshots/demo.png "demo news-app")
